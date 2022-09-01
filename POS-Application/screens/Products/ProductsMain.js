@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
     //height: '60%',
     height: height * 0.3,
     width: "100%",
-    resizeMode: "cover",
+    //resizeMode: "cover",
     marginTop: 0,
     margin: 10,
     borderRadius: 15,
