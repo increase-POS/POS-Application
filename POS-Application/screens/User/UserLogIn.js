@@ -108,8 +108,19 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 15,
     borderWidth: 1,
-    borderColor: colors.grey,
+    borderColor: colors.veryLightGrey,
     paddingVertical: 15,
+
+
+    
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0,
+    shadowRadius: 4.65,
+    elevation: 3,
   },
   scrollViewContainer: {
     justifyContent: "center",

@@ -147,6 +147,15 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 10,
     backgroundColor: colors.white,
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0,
+    shadowRadius: 4.65,
+    elevation: 3,
   },
   viewBorderTop: {
     height: 25,

@@ -31,6 +31,15 @@ const ProductsMain = (props) => {
           borderRadius: 15,
           borderWidth: 1,
           borderColor: colors.veryLightGrey,
+
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 4,
+          },
+          shadowOpacity: 0,
+          shadowRadius: 4.65,
+          elevation: 3,
         }}
       >
         <Text
@@ -70,6 +79,15 @@ const ProductsMain = (props) => {
             borderRadius: 15,
             borderWidth: 1,
             borderColor: colors.veryLightGrey,
+
+            shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 4,
+            },
+            shadowOpacity: 0,
+            shadowRadius: 4.65,
+            elevation: 3,
           }}
         >
           <View style={styles.imageProductContainer}>
@@ -169,18 +187,20 @@ const ProductsMain = (props) => {
             </Text>
           </View>
           <TouchableOpacity
-          onPress={() => {alert("Add to cart")}}
-          style={{
-            height: 45,
-            width: 45,
-            //backgroundColor: colors.grey,
-            //borderRadius: 90,
-            position: "absolute",
-            alignItems: "center",
-            justifyContent: "center",
-            bottom: 20,
-            right: 20,
-          }}
+            onPress={() => {
+              alert("Add to cart");
+            }}
+            style={{
+              height: 45,
+              width: 45,
+              //backgroundColor: colors.grey,
+              //borderRadius: 90,
+              position: "absolute",
+              alignItems: "center",
+              justifyContent: "center",
+              bottom: 20,
+              right: 20,
+            }}
           >
             <View
               style={{

@@ -110,6 +110,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: colors.white,
     height: 100,
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0,
+    shadowRadius: 4.65,
+    elevation: 3,
   },
   viewBorderLeft: {
     width: 15,

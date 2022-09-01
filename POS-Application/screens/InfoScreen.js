@@ -121,6 +121,16 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     borderWidth: 1,
     borderColor: colors.veryLightGrey,
+
+
+    shadowColor: "#000",
+			shadowOffset: {
+			  width: 0,
+			  height: 4,
+			},
+			shadowOpacity: 0,
+			shadowRadius: 4.65,
+			elevation: 3,
   },
   imageProductContainer: {
     //flex:1,
