@@ -10,7 +10,7 @@ import {
   ImageEditor,
   TextInput,
   Button,
-  ScrollView
+  ScrollView,
 } from "react-native";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 
@@ -22,8 +22,10 @@ const ProductDetails = (props) => {
 
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollViewContainer}
-      showsVerticalScrollIndicator={false}>
+      <ScrollView
+        contentContainerStyle={styles.scrollViewContainer}
+        showsVerticalScrollIndicator={false}
+      >
         <View
           style={{
             width: width * 0.85,
@@ -31,178 +33,183 @@ const ProductDetails = (props) => {
             marginVertical: 5,
           }}
         >
-      
-      
-      <View style={styles.imageProductContainer}>
-          <Image
-            source={{
-              uri: item.image
-                ? item.image
-                : "https://images.assetsdelivery.com/compings_v2/koblizeek/koblizeek1902/koblizeek190200055.jpg",
-            }}
-            style={styles.imageProduct}
-          />
-      </View>
-
-        <Text
-          style={{
-            fontSize: 22,
-            alignSelf:"flex-start",
-            //fontfamily
-            color: colors.thickGrey,
-            fontWeight: "bold",
-            marginHorizontal: 10,
-            marginVertical:5
-          }}
-        >
-          {item.name}
-        </Text>
-        <Text
-            style={{
-                fontSize: 18,
-            alignSelf:"flex-start",
-            //fontfamily
-                color: colors.thickGrey,
-                marginHorizontal: 10,
-                marginVertical:5
+          <View style={styles.imageProductContainer}>
+            <Image
+              source={{
+                uri: item.image
+                  ? item.image
+                  : "https://images.assetsdelivery.com/compings_v2/koblizeek/koblizeek1902/koblizeek190200055.jpg",
               }}
-            >
-            {item.description}
-        </Text>
-        <View style={{ 
-          width: width * 0.9,
-            borderTopWidth: 1, 
-            borderColor: colors.lightGrey,
-            marginHorizontal: 10,
-            marginVertical:5,
-            }} />
-        <View 
-                style={{
-                        justifyContent: "flex-start",
-                        flexDirection: 'row',
-                        alignItems:'center',
-            alignSelf:"flex-start",
-          }}
-         >
-            <Text
+              style={styles.imageProduct}
+            />
+          </View>
+
+          <Text
             style={{
+              fontSize: 22,
+              alignSelf: "flex-start",
+              //fontfamily
+              color: colors.thickGrey,
+              fontWeight: "bold",
+              marginHorizontal: 10,
+              marginVertical: 5,
+            }}
+          >
+            {item.name}
+          </Text>
+          <Text
+            style={{
+              fontSize: 18,
+              alignSelf: "flex-start",
+              //fontfamily
+              color: colors.thickGrey,
+              marginHorizontal: 10,
+              marginVertical: 5,
+            }}
+          >
+            {item.description}
+          </Text>
+          <View
+            style={{
+              width: width * 0.9,
+              borderTopWidth: 1,
+              borderColor: colors.lightGrey,
+              marginHorizontal: 10,
+              marginVertical: 5,
+            }}
+          />
+          <View
+            style={{
+              justifyContent: "flex-start",
+              flexDirection: "row",
+              alignItems: "center",
+              alignSelf: "flex-start",
+            }}
+          >
+            <Text
+              style={{
                 fontSize: 22,
                 //fontfamily
                 color: colors.thickGrey,
                 fontWeight: "bold",
                 marginHorizontal: 10,
-                marginVertical:5
-            }}
+                marginVertical: 5,
+              }}
             >
-            Price:
+              Price:
             </Text>
             <Text
-                style={{
-                    fontSize: 18,
-                    //fontfamily
-                    color: colors.thickGrey,
-                    marginHorizontal: 10,
-                marginVertical:5
-                }}
-                >
-                {item.price} KWD
+              style={{
+                fontSize: 18,
+                //fontfamily
+                color: colors.thickGrey,
+                marginHorizontal: 10,
+                marginVertical: 5,
+              }}
+            >
+              {item.price} KWD
             </Text>
-        </View>
+          </View>
 
-        <View 
-                style={{
-                        justifyContent: "flex-start",
-                        flexDirection: 'row',
-                        alignItems:'center',
-            alignSelf:"flex-start",
-          }}
-         >
+          <View
+            style={{
+              justifyContent: "flex-start",
+              flexDirection: "row",
+              alignItems: "center",
+              alignSelf: "flex-start",
+            }}
+          >
             <TouchableOpacity>
-                <View
-                    style={[styles.buttonBox, {backgroundColor: colors.thickGrey, marginLeft: 10}]}
-                >
-                    <IconFontAwesome 
-                        name="minus"
-                        style= {{position: "relative"}}
-                        color = {colors.white}
-                        size={20}
-                        />
-                </View>
+              <View
+                style={[
+                  styles.buttonBox,
+                  { backgroundColor: colors.thickGrey, marginLeft: 10 },
+                ]}
+              >
+                <IconFontAwesome
+                  name="minus"
+                  style={{ position: "relative" }}
+                  color={colors.white}
+                  size={20}
+                />
+              </View>
             </TouchableOpacity>
             <View
-                    style={[styles.buttonBox, {backgroundColor: colors.white, alignItems:'center'}]}
-                >
-                    <TextInput 
+              style={[
+                styles.buttonBox,
+                { backgroundColor: colors.white, alignItems: "center" },
+              ]}
+            >
+              <TextInput
                 placeholder={"0"}
                 //name={"email"}
                 keyboardType="numeric"
                 //id={"email"}
                 //value={email}
                 //onChangeText={(text) => setEmail(text.toLowerCase())}
-                 />
-                </View>
+              />
+            </View>
             <TouchableOpacity>
-                <View
-                    style={[styles.buttonBox, {backgroundColor: colors.thickGrey}]}
-                >
-                    <IconFontAwesome 
-                        name="plus"
-                        style= {{position: "relative"}}
-                        color = {colors.white}
-                        size={20}
-                        />
-                </View>
+              <View
+                style={[
+                  styles.buttonBox,
+                  { backgroundColor: colors.thickGrey },
+                ]}
+              >
+                <IconFontAwesome
+                  name="plus"
+                  style={{ position: "relative" }}
+                  color={colors.white}
+                  size={20}
+                />
+              </View>
             </TouchableOpacity>
-         </View>
+          </View>
 
-        <View 
-                style={{
-                        justifyContent: "flex-start",
-                        flexDirection: 'row',
-                        alignItems:'center',
-                    alignSelf:"flex-start",
-                  }}
-         >
-            <Text
+          <View
             style={{
+              justifyContent: "flex-start",
+              flexDirection: "row",
+              alignItems: "center",
+              alignSelf: "flex-start",
+            }}
+          >
+            <Text
+              style={{
                 fontSize: 22,
                 //fontfamily
                 color: colors.thickGrey,
                 fontWeight: "bold",
                 marginHorizontal: 10,
-                marginVertical:5
-            }}
+                marginVertical: 5,
+              }}
             >
-            Total:
+              Total:
             </Text>
-            <Text 
-            style={{
-                    fontSize: 20,
-                    //fontfamily
-                    color: colors.mainColor,
-                    margin: 5,
-                    fontWeight: '600'
-                }}
+            <Text
+              style={{
+                fontSize: 20,
+                //fontfamily
+                color: colors.mainColor,
+                margin: 5,
+                fontWeight: "600",
+              }}
             >
-            {`${item.price} KWD`}
-        </Text>
-        </View>
+              {`${item.price} KWD`}
+            </Text>
+          </View>
 
-        <TouchableOpacity>
-                <View style={styles.buttonContainer}>
-                   <Text style={styles.buttonText}>View Cart</Text>
-                </View>
-        </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.buttonContainer}>
+              <Text style={styles.buttonText}>View Cart</Text>
+            </View>
+          </TouchableOpacity>
 
-        <TouchableOpacity>
-                <View style={styles.buttonContainer}>
-                   <Text style={styles.buttonText}>Checkout</Text>
-                </View>
-        </TouchableOpacity>
-        
-        
-        
-       
+          <TouchableOpacity>
+            <View style={styles.buttonContainer}>
+              <Text style={styles.buttonText}>Checkout</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
@@ -239,13 +246,13 @@ const styles = StyleSheet.create({
   },
   imageProductContainer: {
     //flex:1,
-    alignSelf: 'center',
+    alignSelf: "center",
     // width: width < height ? width * 0.4 : height * 0.2,
     // height: width < height ?  width * 0.4  : height * 0.2,
     height: height * 0.25,
     width: "95%",
     //resizeMode: "cover",
-    resizeMode: 'stretch',
+    resizeMode: "stretch",
     marginBottom: 20,
     borderRadius: 10,
   },
@@ -262,28 +269,25 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.thickGrey,
     marginHorizontal: 5,
-    marginVertical:5,
-    alignItems: 'center',
-    justifyContent: 'center'
-    
+    marginVertical: 5,
+    alignItems: "center",
+    justifyContent: "center",
   },
   buttonContainer: {
     //marginHorizontal: 10,
-    marginVertical:5,
+    marginVertical: 5,
     backgroundColor: colors.thickGrey,
     width: width * 0.9,
     height: 35,
-    alignItems: 'center',
-    alignSelf: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "center",
     borderRadius: 25,
-    
   },
   buttonText: {
     color: colors.white,
-    fontSize: 18
-    
-  }
+    fontSize: 18,
+  },
 });
 
 export default ProductDetails;
