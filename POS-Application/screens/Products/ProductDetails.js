@@ -243,10 +243,10 @@ const styles = StyleSheet.create({
     // width: width < height ? width * 0.4 : height * 0.2,
     // height: width < height ?  width * 0.4  : height * 0.2,
     height: height * 0.25,
-    width: "90%",
+    width: "95%",
     //resizeMode: "cover",
     resizeMode: 'stretch',
-    marginVertical: 20,
+    marginBottom: 20,
     borderRadius: 10,
   },
   imageProduct: {
